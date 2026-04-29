@@ -6,34 +6,37 @@ import { Suspense, useLayoutEffect, useMemo, useRef } from "react";
 import * as THREE from "three";
 import { clone } from "three/examples/jsm/utils/SkeletonUtils.js";
 
+const assetBase = import.meta.env.BASE_URL;
+const modelUrl = (name) => `${assetBase}models/${name}`;
+
 const MODEL_CONFIG = {
   hero: {
-    path: "/models/shoe.glb",
+    path: modelUrl("shoe.glb"),
     fitHeight: 3.2,
     rotation: [0.16, -1.1, 0.04],
     offset: [0, -0.1, 0],
     scaleGain: 0.42,
   },
   chaussures: {
-    path: "/models/shoe.glb",
+    path: modelUrl("shoe.glb"),
     fitHeight: 2.05,
     rotation: [0.12, -0.92, 0.04],
     offset: [0, -0.08, 0],
   },
   vêtements: {
-    path: "/models/clothing.glb",
+    path: modelUrl("clothing.glb"),
     fitHeight: 2.05,
     rotation: [0.06, -0.56, 0],
     offset: [0, -0.02, 0],
   },
   électronique: {
-    path: "/models/electronics.glb",
+    path: modelUrl("electronics.glb"),
     fitHeight: 2.2,
     rotation: [0.12, -0.72, 0],
     offset: [0, -0.02, 0],
   },
   accessoires: {
-    path: "/models/accessory.glb",
+    path: modelUrl("accessory.glb"),
     fitHeight: 1.9,
     rotation: [0.14, -0.72, 0],
     offset: [0, 0, 0],
@@ -199,7 +202,7 @@ export function ProductViewerCanvas({ category }) {
   );
 }
 
-useGLTF.preload("/models/shoe.glb");
-useGLTF.preload("/models/clothing.glb");
-useGLTF.preload("/models/electronics.glb");
-useGLTF.preload("/models/accessory.glb");
+useGLTF.preload(modelUrl("shoe.glb"));
+useGLTF.preload(modelUrl("clothing.glb"));
+useGLTF.preload(modelUrl("electronics.glb"));
+useGLTF.preload(modelUrl("accessory.glb"));
