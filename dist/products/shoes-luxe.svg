@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500" fill="none">
+  <defs>
+    <linearGradient id="bg2" x1="100" y1="64" x2="1049" y2="1457" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#140F09"/>
+      <stop offset="0.52" stop-color="#080807"/>
+      <stop offset="1" stop-color="#120E0A"/>
+    </linearGradient>
+    <linearGradient id="heel" x1="347" y1="1024" x2="836" y2="635" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8E8BB"/>
+      <stop offset="0.4" stop-color="#C9982A"/>
+      <stop offset="1" stop-color="#50390E"/>
+    </linearGradient>
+    <radialGradient id="spot2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(884 287) rotate(123.232) scale(469.603 408.33)">
+      <stop stop-color="#E8C772" stop-opacity="0.38"/>
+      <stop offset="1" stop-color="#E8C772" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="1500" fill="url(#bg2)"/>
+  <rect width="1200" height="1500" fill="url(#spot2)"/>
+  <path d="M347 1025C485 988 627 912 764 761C815 703 869 674 940 673C934 752 903 851 826 944C749 1037 640 1092 515 1110C431 1122 360 1108 316 1075C316 1054 327 1038 347 1025Z" fill="url(#heel)"/>
+  <path d="M801 759C785 831 765 905 739 979" stroke="#F0EAD6" stroke-opacity="0.68" stroke-width="13" stroke-linecap="round"/>
+  <path d="M474 1031C521 1017 612 986 694 932" stroke="#221806" stroke-opacity="0.5" stroke-width="14" stroke-linecap="round"/>
+  <path d="M656 898C617 946 565 985 515 1012" stroke="#F0EAD6" stroke-opacity="0.58" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="934" cy="670" r="78" fill="#F0EAD6" fill-opacity="0.06"/>
+  <text x="88" y="142" fill="#C9982A" font-family="Arial" font-size="54" letter-spacing="12">KORA IMPORT</text>
+  <text x="88" y="286" fill="#F0EAD6" font-family="Arial" font-size="136" font-weight="700">LOME LUXE</text>
+  <text x="88" y="376" fill="#BFAE83" font-family="Arial" font-size="40" letter-spacing="8">CEREMONY HEEL · TURQUIE</text>
+  <text x="88" y="1334" fill="#F0EAD6" fill-opacity="0.88" font-family="Arial" font-size="34">Une présence plus mode, plus boutique, pour les produits à forte valeur perçue.</text>
+</svg>

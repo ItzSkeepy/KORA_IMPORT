@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500" fill="none">
+  <defs>
+    <linearGradient id="obg" x1="140" y1="92" x2="1032" y2="1438" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0A1218"/>
+      <stop offset="0.58" stop-color="#070707"/>
+      <stop offset="1" stop-color="#0A141A"/>
+    </linearGradient>
+    <linearGradient id="watch" x1="430" y1="474" x2="792" y2="1048" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E8FAFF"/>
+      <stop offset="0.35" stop-color="#9BCFE6"/>
+      <stop offset="0.7" stop-color="#36586D"/>
+      <stop offset="1" stop-color="#11171B"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1500" fill="url(#obg)"/>
+  <circle cx="253" cy="1150" r="219" fill="#7ABFE5" fill-opacity="0.09"/>
+  <rect x="502" y="382" width="196" height="181" rx="46" fill="url(#watch)"/>
+  <rect x="522" y="405" width="156" height="136" rx="28" fill="#071720"/>
+  <rect x="570" y="562" width="60" height="372" rx="30" fill="url(#watch)"/>
+  <rect x="570" y="12" width="60" height="370" rx="30" fill="url(#watch)"/>
+  <path d="M552 466H647" stroke="#9ED6EA" stroke-width="6" stroke-linecap="round"/>
+  <path d="M552 497H624" stroke="#9ED6EA" stroke-width="6" stroke-linecap="round"/>
+  <text x="92" y="142" fill="#78C4E7" font-family="Arial" font-size="54" letter-spacing="12">KORA IMPORT</text>
+  <text x="92" y="294" fill="#F0EAD6" font-family="Arial" font-size="136" font-weight="700">ORBIT LED</text>
+  <text x="92" y="384" fill="#A8CFE3" font-family="Arial" font-size="40" letter-spacing="8">CONNECTED WATCH · FAST SELLER</text>
+  <text x="92" y="1334" fill="#F0EAD6" fill-opacity="0.88" font-family="Arial" font-size="34">Direction luxe-tech plus propre, idéale pour rassurer sur la qualité perçue.</text>
+</svg>

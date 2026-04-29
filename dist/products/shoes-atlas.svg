@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="181" y1="95" x2="1014" y2="1444" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1A1408"/>
+      <stop offset="0.55" stop-color="#0D0B09"/>
+      <stop offset="1" stop-color="#080807"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(846 344) rotate(120.838) scale(513.497 446.955)">
+      <stop stop-color="#C9982A" stop-opacity="0.48"/>
+      <stop offset="1" stop-color="#C9982A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="shoe" x1="282" y1="872" x2="871" y2="982" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F6E4B2"/>
+      <stop offset="0.3" stop-color="#C9982A"/>
+      <stop offset="0.75" stop-color="#5A4110"/>
+      <stop offset="1" stop-color="#1A1308"/>
+    </linearGradient>
+    <linearGradient id="sole" x1="250" y1="1007" x2="968" y2="1007" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F0EAD6"/>
+      <stop offset="1" stop-color="#8D825E"/>
+    </linearGradient>
+    <filter id="blur" x="109" y="723" width="965" height="445" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="48"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="1500" fill="url(#bg)"/>
+  <rect width="1200" height="1500" fill="url(#glow)"/>
+  <circle cx="981" cy="266" r="172" fill="#C9982A" fill-opacity="0.13"/>
+  <circle cx="258" cy="1233" r="217" fill="#FFF1CA" fill-opacity="0.06"/>
+  <g filter="url(#blur)" opacity="0.55">
+    <ellipse cx="591" cy="946" rx="371" ry="94" fill="#000"/>
+  </g>
+  <path d="M250 1008C317 1017 409 1014 506 1005L707 986C804 977 900 992 968 1022C930 1055 863 1075 766 1080H475C367 1080 284 1060 250 1008Z" fill="url(#sole)"/>
+  <path d="M320 820C391 771 487 736 579 729C650 723 758 755 841 834C887 878 920 936 934 1000C850 978 780 969 705 975L485 993C412 999 352 996 301 986C286 946 282 870 320 820Z" fill="url(#shoe)"/>
+  <path d="M409 827C476 801 566 788 645 801C716 812 803 863 857 928" stroke="#F9F1DA" stroke-opacity="0.76" stroke-width="17" stroke-linecap="round"/>
+  <path d="M394 861C461 835 552 821 632 834C700 846 788 895 845 956" stroke="#2A1E09" stroke-opacity="0.7" stroke-width="10" stroke-linecap="round"/>
+  <path d="M465 777L510 854" stroke="#F0EAD6" stroke-opacity="0.52" stroke-width="11" stroke-linecap="round"/>
+  <path d="M548 761L592 848" stroke="#F0EAD6" stroke-opacity="0.52" stroke-width="11" stroke-linecap="round"/>
+  <path d="M624 766L668 853" stroke="#F0EAD6" stroke-opacity="0.52" stroke-width="11" stroke-linecap="round"/>
+  <text x="92" y="142" fill="#C9982A" font-family="Arial" font-size="54" letter-spacing="12">KORA IMPORT</text>
+  <text x="92" y="294" fill="#F0EAD6" font-family="Arial" font-size="136" font-weight="700">SNEAKER ATLAS</text>
+  <text x="92" y="384" fill="#BFAE83" font-family="Arial" font-size="40" letter-spacing="8">CHAUSSURES · WHOLESALE EDIT</text>
+  <text x="92" y="1334" fill="#F0EAD6" fill-opacity="0.88" font-family="Arial" font-size="34">Silhouette premium, lumière studio dorée, rendu éditorial pour vitrine grossiste.</text>
+</svg>

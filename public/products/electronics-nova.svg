@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500" fill="none">
+  <defs>
+    <linearGradient id="ebg" x1="198" y1="68" x2="986" y2="1426" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#09131B"/>
+      <stop offset="0.54" stop-color="#090908"/>
+      <stop offset="1" stop-color="#0A151D"/>
+    </linearGradient>
+    <linearGradient id="phoneBody" x1="423" y1="422" x2="734" y2="1092" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#DDF4FF"/>
+      <stop offset="0.33" stop-color="#84C5E6"/>
+      <stop offset="0.68" stop-color="#20516A"/>
+      <stop offset="1" stop-color="#0D1114"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="454" y1="476" x2="703" y2="1062" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D7F6FF"/>
+      <stop offset="0.5" stop-color="#69B8E7"/>
+      <stop offset="1" stop-color="#07121A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1500" fill="url(#ebg)"/>
+  <circle cx="867" cy="273" r="195" fill="#78C4E7" fill-opacity="0.18"/>
+  <rect x="398" y="393" width="408" height="729" rx="56" fill="url(#phoneBody)"/>
+  <rect x="434" y="447" width="336" height="621" rx="34" fill="url(#screen)"/>
+  <circle cx="603" cy="1043" r="16" fill="#DFF7FF" fill-opacity="0.62"/>
+  <circle cx="505" cy="520" r="74" fill="#FFFFFF" fill-opacity="0.14"/>
+  <path d="M493 541C556 501 663 534 718 607" stroke="#E5F8FF" stroke-opacity="0.6" stroke-width="12" stroke-linecap="round"/>
+  <text x="92" y="142" fill="#78C4E7" font-family="Arial" font-size="54" letter-spacing="12">KORA IMPORT</text>
+  <text x="92" y="294" fill="#F0EAD6" font-family="Arial" font-size="136" font-weight="700">NOVA 6</text>
+  <text x="92" y="384" fill="#A8CFE3" font-family="Arial" font-size="40" letter-spacing="8">ELECTRONIQUE · CINEMATIC TECH</text>
+  <text x="92" y="1334" fill="#F0EAD6" fill-opacity="0.88" font-family="Arial" font-size="34">Référence technologique avec surfaces froides, reflet écran et halo premium.</text>
+</svg>

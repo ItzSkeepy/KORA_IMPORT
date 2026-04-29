@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500" fill="none">
+  <defs>
+    <linearGradient id="rbg" x1="151" y1="115" x2="1051" y2="1450" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#130F0B"/>
+      <stop offset="1" stop-color="#070707"/>
+    </linearGradient>
+    <linearGradient id="polo" x1="316" y1="545" x2="836" y2="1040" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FAF1D8"/>
+      <stop offset="0.42" stop-color="#D9B465"/>
+      <stop offset="0.75" stop-color="#9B7330"/>
+      <stop offset="1" stop-color="#21170A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1500" fill="url(#rbg)"/>
+  <circle cx="279" cy="1157" r="229" fill="#F6E4B2" fill-opacity="0.08"/>
+  <path d="M443 549C483 517 545 486 600 486C655 486 719 516 759 548L839 630L777 692L719 646V1062H481V646L423 692L362 630L443 549Z" fill="url(#polo)"/>
+  <path d="M531 499L602 572L673 499" stroke="#5C4314" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M602 571V1061" stroke="#F7E7BD" stroke-opacity="0.5" stroke-width="10" stroke-linecap="round"/>
+  <path d="M505 759H700" stroke="#F7E7BD" stroke-opacity="0.44" stroke-width="9" stroke-linecap="round"/>
+  <path d="M505 847H700" stroke="#F7E7BD" stroke-opacity="0.44" stroke-width="9" stroke-linecap="round"/>
+  <text x="92" y="142" fill="#D9B465" font-family="Arial" font-size="54" letter-spacing="12">KORA IMPORT</text>
+  <text x="92" y="294" fill="#F0EAD6" font-family="Arial" font-size="136" font-weight="700">POLO RIVIERA</text>
+  <text x="92" y="384" fill="#D8C8A0" font-family="Arial" font-size="40" letter-spacing="8">CASUAL PACK · WHOLESALE</text>
+  <text x="92" y="1334" fill="#F0EAD6" fill-opacity="0.88" font-family="Arial" font-size="34">Une direction plus éditoriale textile, avec un tombé propre et des contrastes doux.</text>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500" fill="none">
+  <defs>
+    <linearGradient id="abg2" x1="165" y1="71" x2="1037" y2="1438" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#15100D"/>
+      <stop offset="0.52" stop-color="#080807"/>
+      <stop offset="1" stop-color="#120E0B"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="434" y1="513" x2="773" y2="923" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF2E7"/>
+      <stop offset="0.4" stop-color="#D9A07D"/>
+      <stop offset="0.78" stop-color="#8D5C45"/>
+      <stop offset="1" stop-color="#291B15"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1500" fill="url(#abg2)"/>
+  <circle cx="304" cy="1170" r="204" fill="#D9A07D" fill-opacity="0.09"/>
+  <circle cx="604" cy="746" r="196" stroke="url(#metal)" stroke-width="38"/>
+  <circle cx="604" cy="746" r="101" stroke="#FFF0E1" stroke-opacity="0.5" stroke-width="12"/>
+  <circle cx="604" cy="746" r="15" fill="#FFF0E1" fill-opacity="0.8"/>
+  <text x="92" y="142" fill="#D9A07D" font-family="Arial" font-size="54" letter-spacing="12">KORA IMPORT</text>
+  <text x="92" y="294" fill="#F0EAD6" font-family="Arial" font-size="136" font-weight="700">AURA</text>
+  <text x="92" y="384" fill="#DDBAA2" font-family="Arial" font-size="40" letter-spacing="8">ACCESSOIRES · BIJOUX MODE</text>
+  <text x="92" y="1334" fill="#F0EAD6" fill-opacity="0.88" font-family="Arial" font-size="34">Un visuel plus bijou, plus précis, pour mieux faire monter la valeur perçue des accessoires.</text>
+</svg>

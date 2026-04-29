@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500" fill="none">
+  <defs>
+    <linearGradient id="abg" x1="177" y1="93" x2="988" y2="1431" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#17120D"/>
+      <stop offset="0.5" stop-color="#0B0908"/>
+      <stop offset="1" stop-color="#15100B"/>
+    </linearGradient>
+    <linearGradient id="fabric" x1="302" y1="518" x2="832" y2="1106" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F6D993"/>
+      <stop offset="0.35" stop-color="#D8AF54"/>
+      <stop offset="0.68" stop-color="#8E6320"/>
+      <stop offset="1" stop-color="#281D0C"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1500" fill="url(#abg)"/>
+  <circle cx="921" cy="281" r="194" fill="#D9B465" fill-opacity="0.16"/>
+  <path d="M486 513C526 476 576 458 602 458C628 458 684 479 724 516L817 620L762 676L706 629V1097H500V629L443 677L386 620L486 513Z" fill="url(#fabric)"/>
+  <path d="M502 703L697 703" stroke="#F8E8BF" stroke-opacity="0.42" stroke-width="10" stroke-linecap="round"/>
+  <path d="M502 786L697 786" stroke="#F8E8BF" stroke-opacity="0.42" stroke-width="10" stroke-linecap="round"/>
+  <path d="M502 869L697 869" stroke="#F8E8BF" stroke-opacity="0.42" stroke-width="10" stroke-linecap="round"/>
+  <path d="M602 529L602 1097" stroke="#5B3D11" stroke-opacity="0.55" stroke-width="12" stroke-linecap="round"/>
+  <text x="92" y="142" fill="#D9B465" font-family="Arial" font-size="54" letter-spacing="12">KORA IMPORT</text>
+  <text x="92" y="294" fill="#F0EAD6" font-family="Arial" font-size="136" font-weight="700">ANKARA SOFT</text>
+  <text x="92" y="384" fill="#D8C8A0" font-family="Arial" font-size="40" letter-spacing="8">VETEMENTS · RETAIL READY</text>
+  <text x="92" y="1334" fill="#F0EAD6" fill-opacity="0.88" font-family="Arial" font-size="34">Visuel mode plus net, plus premium, pensé pour donner de la valeur dès la grille catalogue.</text>
+</svg>
