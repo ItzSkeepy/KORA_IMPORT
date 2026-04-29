@@ -1,8 +1,11 @@
+const assetBase = import.meta.env.BASE_URL;
+const productAsset = (path) => `${assetBase}${path}`;
+
 const mediaLibrary = {
-  chaussures: ["/products/photos/shoes-premium.jpg", "/products/shoes-luxe.svg"],
-  vêtements: ["/products/photos/clothing-model.jpg", "/products/apparel-riviera.svg"],
-  électronique: ["/products/photos/phone-minimal.jpg", "/products/electronics-orbit.svg"],
-  accessoires: ["/products/photos/accessories-flatlay.jpg", "/products/accessories-aura.svg"],
+  chaussures: [productAsset("products/photos/shoes-premium.jpg"), productAsset("products/shoes-luxe.svg")],
+  vêtements: [productAsset("products/photos/clothing-model.jpg"), productAsset("products/apparel-riviera.svg")],
+  électronique: [productAsset("products/photos/phone-minimal.jpg"), productAsset("products/electronics-orbit.svg")],
+  accessoires: [productAsset("products/photos/accessories-flatlay.jpg"), productAsset("products/accessories-aura.svg")],
 };
 
 function createProduct(id, name, category, origin, prices, badge, description) {
