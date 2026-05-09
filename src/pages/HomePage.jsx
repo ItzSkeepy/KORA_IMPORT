@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+ï»¿import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import gsap from "gsap";
@@ -14,10 +14,10 @@ import { buildWhatsAppUrl } from "../utils/whatsapp";
 gsap.registerPlugin(ScrollTrigger);
 
 const whyStats = [
-  { value: "Direct", label: "Import direct Turquie · Chine · Dubai" },
+  { value: "Direct", label: "Import direct Turquie Â· Chine Â· Dubai" },
   { value: "3-4j", label: "Livraison express sur les meilleurs lots" },
-  { value: "Grossiste", label: "Tarifs conçus pour la revente et la marge" },
-  { value: "Varié", label: "Stock multi-catégories toute l’année" },
+  { value: "Grossiste", label: "Tarifs conÃ§us pour la revente et la marge" },
+  { value: "VariÃ©", label: "Stock multi-catÃ©gories toute lâ€™annÃ©e" },
 ];
 
 const showcaseProducts = products.slice(0, 6);
@@ -38,7 +38,7 @@ export default function HomePage() {
   const [loadingDone, setLoadingDone] = useState(false);
   const { isLowEnd, isMobile } = useDeviceCapability();
 
-  const titleWords = useMemo(() => ["L’import", "direct", "à", "votre", "portée"], []);
+  const titleWords = useMemo(() => ["LIMPORT", "DIRECT", "A", "VOTRE", "PORTEE"], []);
 
   useEffect(() => {
     const timer = window.setTimeout(() => setLoadingDone(true), 600);
@@ -188,7 +188,7 @@ export default function HomePage() {
                 ))}
               </h1>
               <p className="hero-subtitle mt-6 max-w-xl text-base leading-8 text-kora-cream/72 md:text-xl">
-                Une expérience d’achat wholesale pensée comme un film: chaussures, vêtements, électronique et accessoires mis en scène avec des objets 3D flottants, un scroll lent, et un parcours de commande direct sur WhatsApp.
+                Une expÃ©rience dâ€™achat wholesale pensÃ©e comme un film: chaussures, vÃªtements, Ã©lectronique et accessoires mis en scÃ¨ne avec des objets 3D flottants, un scroll lent, et un parcours de commande direct sur WhatsApp.
               </p>
             </div>
 
@@ -201,10 +201,10 @@ export default function HomePage() {
               </Link>
               <a
                 href={buildWhatsAppUrl({
-                  productName: "Sélection wholesale",
+                  productName: "SÃ©lection wholesale",
                   qty: 20,
                   total: formatMoney(54000, "FCFA"),
-                  city: "Lomé",
+                  city: "LomÃ©",
                 })}
                 target="_blank"
                 rel="noreferrer"
@@ -233,9 +233,9 @@ export default function HomePage() {
                       <h3 className="mt-4 font-display text-5xl uppercase leading-none">{category.label}</h3>
                     </div>
                     <div>
-                      <p className="text-sm uppercase tracking-[0.24em] text-kora-muted">{category.count} références prêtes au stock</p>
+                      <p className="text-sm uppercase tracking-[0.24em] text-kora-muted">{category.count} rÃ©fÃ©rences prÃªtes au stock</p>
                       <p className="mt-3 max-w-sm text-sm leading-7 text-kora-cream/72">
-                        Cartes vitrées, mouvements lents, et un objet 3D flottant dédié pour faire sentir chaque catégorie avant même le clic.
+                        Cartes vitrÃ©es, mouvements lents, et un objet 3D flottant dÃ©diÃ© pour faire sentir chaque catÃ©gorie avant mÃªme le clic.
                       </p>
                     </div>
                   </div>
@@ -256,7 +256,7 @@ export default function HomePage() {
                 to="/catalogue"
                 className="button-press rounded-full border border-kora-gold/45 px-6 py-4 text-sm uppercase tracking-[0.34em] text-kora-cream"
               >
-                Explorer les catégories
+                Explorer les catÃ©gories
               </Link>
             </div>
           </div>
@@ -273,7 +273,7 @@ export default function HomePage() {
             </div>
             <div className="price-end absolute inset-x-0 top-1/2 -translate-y-1/2 font-display text-[3rem] uppercase leading-none text-kora-cream md:text-[7rem]">
               54 000 FCFA
-              <span className="mt-3 block text-[1.5rem] text-kora-gold md:text-[2.4rem]">pour 20 pièces</span>
+              <span className="mt-3 block text-[1.5rem] text-kora-gold md:text-[2.4rem]">pour 20 piÃ¨ces</span>
             </div>
             <div className="currency-switch mt-16 flex justify-center gap-3">
               {["FCFA", "USD", "GNF"].map((currency) => (
@@ -290,7 +290,7 @@ export default function HomePage() {
               ))}
             </div>
             <p className="mt-8 text-sm uppercase tracking-[0.3em] text-kora-muted">
-              Sneaker Atlas • {formatMoney(products[0].bulkPrices[0][activeCurrency] ?? products[0].unitPrice[activeCurrency], activeCurrency)} {activeCurrency}
+              Sneaker Atlas â€¢ {formatMoney(products[0].bulkPrices[0][activeCurrency] ?? products[0].unitPrice[activeCurrency], activeCurrency)} {activeCurrency}
             </p>
           </div>
         </div>
@@ -302,8 +302,8 @@ export default function HomePage() {
             <div>
               <SectionHeading
                 kicker="Pourquoi Kora"
-                title="Des routes claires. Des délais lisibles."
-                body="On transforme la complexité d’approvisionnement en une narration simple: source, stock, coût, livraison, commande."
+                title="Des routes claires. Des dÃ©lais lisibles."
+                body="On transforme la complexitÃ© dâ€™approvisionnement en une narration simple: source, stock, coÃ»t, livraison, commande."
               />
               <div className="mt-12 space-y-5">
                 {whyStats.map((stat) => (
@@ -385,7 +385,7 @@ export default function HomePage() {
                         productName: product.name,
                         qty: 20,
                         total: formatMoney(product.bulkPrices[0].FCFA, "FCFA"),
-                        city: "Lomé",
+                        city: "LomÃ©",
                       })}
                       target="_blank"
                       rel="noreferrer"
@@ -406,10 +406,10 @@ export default function HomePage() {
         <div className="relative z-10 mx-auto max-w-5xl rounded-[2.5rem] border border-kora-gold/20 bg-white/5 px-6 py-16 text-center backdrop-blur-xl md:px-14">
           <p className="gold-kicker">Finale</p>
           <h2 className="mt-5 font-display text-6xl uppercase leading-none text-kora-cream md:text-[7rem]">
-            Prêt à commander ?
+            PrÃªt Ã  commander ?
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-kora-cream/72 md:text-lg">
-            Une sélection wholesale qui se découvre comme une histoire et se convertit en commande sans friction.
+            Une sÃ©lection wholesale qui se dÃ©couvre comme une histoire et se convertit en commande sans friction.
           </p>
           <div className="mt-10 flex justify-center">
             <a
@@ -417,7 +417,7 @@ export default function HomePage() {
                 productName: "Panier KORA IMPORT",
                 qty: 20,
                 total: formatMoney(54000, "FCFA"),
-                city: "Lomé",
+                city: "LomÃ©",
               })}
               target="_blank"
               rel="noreferrer"
@@ -431,3 +431,4 @@ export default function HomePage() {
     </div>
   );
 }
+
