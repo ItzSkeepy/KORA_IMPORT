@@ -14,10 +14,10 @@ import { buildWhatsAppUrl } from "../utils/whatsapp";
 gsap.registerPlugin(ScrollTrigger);
 
 const whyStats = [
-  { value: "Direct", label: "Import direct Turquie Â· Chine Â· Dubai" },
+  { value: "Direct", label: "Import direct Turquie · Chine · Dubai" },
   { value: "3-4j", label: "Livraison express sur les meilleurs lots" },
-  { value: "Grossiste", label: "Tarifs conÃ§us pour la revente et la marge" },
-  { value: "VariÃ©", label: "Stock multi-catÃ©gories toute lâ€™annÃ©e" },
+  { value: "Grossiste", label: "Tarifs conçus pour la revente et la marge" },
+  { value: "Varié", label: "Stock multi-catégories toute l’année" },
 ];
 
 const showcaseProducts = products.slice(0, 6);
@@ -36,9 +36,9 @@ export default function HomePage() {
   const [heroProgress, setHeroProgress] = useState(0);
   const [activeCurrency, setActiveCurrency] = useState("FCFA");
   const [loadingDone, setLoadingDone] = useState(false);
-  const { isLowEnd } = useDeviceCapability();
+  const { isLowEnd, isMobile } = useDeviceCapability();
 
-  const titleWords = useMemo(() => ["Lâ€™import", "direct", "Ã ", "votre", "portÃ©e"], []);
+  const titleWords = useMemo(() => ["L’import", "direct", "à", "votre", "portée"], []);
 
   useEffect(() => {
     const timer = window.setTimeout(() => setLoadingDone(true), 600);
@@ -62,7 +62,7 @@ export default function HomePage() {
       ScrollTrigger.create({
         trigger: heroRef.current,
         start: "top top",
-        end: "+=100%",
+        end: () => `+=${isMobile ? 65 : 100}%`,
         pin: true,
         scrub: true,
         onUpdate: (self) => setHeroProgress(self.progress),
@@ -73,8 +73,8 @@ export default function HomePage() {
         scrollTrigger: {
           trigger: categoriesRef.current,
           start: "top top",
-          end: "+=150%",
-          pin: true,
+          end: () => `+=${isMobile ? 85 : 150}%`,
+          pin: !isMobile,
           scrub: true,
         },
       });
@@ -103,8 +103,8 @@ export default function HomePage() {
         scrollTrigger: {
           trigger: pricingRef.current,
           start: "top top",
-          end: "+=100%",
-          pin: true,
+          end: () => `+=${isMobile ? 70 : 100}%`,
+          pin: !isMobile,
           scrub: true,
         },
       });
@@ -117,8 +117,8 @@ export default function HomePage() {
         scrollTrigger: {
           trigger: whyRef.current,
           start: "top top",
-          end: "+=100%",
-          pin: true,
+          end: () => `+=${isMobile ? 70 : 100}%`,
+          pin: !isMobile,
           scrub: true,
         },
       });
@@ -126,15 +126,15 @@ export default function HomePage() {
       whyTl.fromTo(".route-path", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.8 }, 0);
 
       const showcaseTrack = showcaseRef.current?.querySelector(".showcase-track");
-      if (showcaseTrack) {
+      if (showcaseTrack && !isMobile) {
         gsap.to(showcaseTrack, {
           x: () => -(showcaseTrack.scrollWidth - window.innerWidth + 80),
           ease: "none",
           scrollTrigger: {
             trigger: showcaseRef.current,
             start: "top top",
-            end: "+=150%",
-            pin: true,
+            end: () => `+=${isMobile ? 95 : 150}%`,
+            pin: !isMobile,
             scrub: true,
           },
         });
@@ -143,9 +143,12 @@ export default function HomePage() {
       ScrollTrigger.create({
         trigger: showcaseRef.current,
         start: "top top",
-        end: "+=150%",
-        scrub: true,
+        end: () => `+=${isMobile ? 95 : 150}%`,
+        scrub: !isMobile,
         onUpdate: () => {
+          if (isMobile) {
+            return;
+          }
           gsap.utils.toArray(".showcase-card").forEach((card) => {
             const rect = card.getBoundingClientRect();
             const centerDelta = Math.abs(window.innerWidth / 2 - (rect.left + rect.width / 2));
@@ -157,7 +160,7 @@ export default function HomePage() {
     }, rootRef);
 
     return () => ctx.revert();
-  }, [loadingDone]);
+  }, [loadingDone, isMobile]);
 
   return (
     <div ref={rootRef} className="bg-kora-black">
@@ -185,7 +188,7 @@ export default function HomePage() {
                 ))}
               </h1>
               <p className="hero-subtitle mt-6 max-w-xl text-base leading-8 text-kora-cream/72 md:text-xl">
-                Une expÃ©rience dâ€™achat wholesale pensÃ©e comme un film: chaussures, vÃªtements, Ã©lectronique et accessoires mis en scÃ¨ne avec des objets 3D flottants, un scroll lent, et un parcours de commande direct sur WhatsApp.
+                Une expérience d’achat wholesale pensée comme un film: chaussures, vêtements, électronique et accessoires mis en scène avec des objets 3D flottants, un scroll lent, et un parcours de commande direct sur WhatsApp.
               </p>
             </div>
 
@@ -198,10 +201,10 @@ export default function HomePage() {
               </Link>
               <a
                 href={buildWhatsAppUrl({
-                  productName: "SÃ©lection wholesale",
+                  productName: "Sélection wholesale",
                   qty: 20,
                   total: formatMoney(54000, "FCFA"),
-                  city: "LomÃ©",
+                  city: "Lomé",
                 })}
                 target="_blank"
                 rel="noreferrer"
@@ -221,7 +224,7 @@ export default function HomePage() {
             <div className="category-word pointer-events-none absolute inset-0 flex items-center justify-center font-display text-[4rem] uppercase tracking-[0.2em] text-kora-cream/70 md:text-[8rem]">
               Chaussures
             </div>
-            <div className="grid gap-6 pt-32 md:grid-cols-2">
+            <div className="grid gap-6 pt-24 md:pt-32 md:grid-cols-2">
               {categories.map((category) => (
                 <motion.article key={category.key} className="category-card glass-panel grid min-h-[18rem] gap-4 rounded-[2rem] p-6 md:grid-cols-[1.2fr_0.8fr]">
                   <div className="flex flex-col justify-between">
@@ -230,9 +233,9 @@ export default function HomePage() {
                       <h3 className="mt-4 font-display text-5xl uppercase leading-none">{category.label}</h3>
                     </div>
                     <div>
-                      <p className="text-sm uppercase tracking-[0.24em] text-kora-muted">{category.count} rÃ©fÃ©rences prÃªtes au stock</p>
+                      <p className="text-sm uppercase tracking-[0.24em] text-kora-muted">{category.count} références prêtes au stock</p>
                       <p className="mt-3 max-w-sm text-sm leading-7 text-kora-cream/72">
-                        Cartes vitrÃ©es, mouvements lents, et un objet 3D flottant dÃ©diÃ© pour faire sentir chaque catÃ©gorie avant mÃªme le clic.
+                        Cartes vitrées, mouvements lents, et un objet 3D flottant dédié pour faire sentir chaque catégorie avant même le clic.
                       </p>
                     </div>
                   </div>
@@ -253,7 +256,7 @@ export default function HomePage() {
                 to="/catalogue"
                 className="button-press rounded-full border border-kora-gold/45 px-6 py-4 text-sm uppercase tracking-[0.34em] text-kora-cream"
               >
-                Explorer les catÃ©gories
+                Explorer les catégories
               </Link>
             </div>
           </div>
@@ -270,7 +273,7 @@ export default function HomePage() {
             </div>
             <div className="price-end absolute inset-x-0 top-1/2 -translate-y-1/2 font-display text-[3rem] uppercase leading-none text-kora-cream md:text-[7rem]">
               54 000 FCFA
-              <span className="mt-3 block text-[1.5rem] text-kora-gold md:text-[2.4rem]">pour 20 piÃ¨ces</span>
+              <span className="mt-3 block text-[1.5rem] text-kora-gold md:text-[2.4rem]">pour 20 pièces</span>
             </div>
             <div className="currency-switch mt-16 flex justify-center gap-3">
               {["FCFA", "USD", "GNF"].map((currency) => (
@@ -287,7 +290,7 @@ export default function HomePage() {
               ))}
             </div>
             <p className="mt-8 text-sm uppercase tracking-[0.3em] text-kora-muted">
-              Sneaker Atlas â€¢ {formatMoney(products[0].bulkPrices[0][activeCurrency] ?? products[0].unitPrice[activeCurrency], activeCurrency)} {activeCurrency}
+              Sneaker Atlas • {formatMoney(products[0].bulkPrices[0][activeCurrency] ?? products[0].unitPrice[activeCurrency], activeCurrency)} {activeCurrency}
             </p>
           </div>
         </div>
@@ -299,8 +302,8 @@ export default function HomePage() {
             <div>
               <SectionHeading
                 kicker="Pourquoi Kora"
-                title="Des routes claires. Des dÃ©lais lisibles."
-                body="On transforme la complexitÃ© dâ€™approvisionnement en une narration simple: source, stock, coÃ»t, livraison, commande."
+                title="Des routes claires. Des délais lisibles."
+                body="On transforme la complexité d’approvisionnement en une narration simple: source, stock, coût, livraison, commande."
               />
               <div className="mt-12 space-y-5">
                 {whyStats.map((stat) => (
@@ -360,11 +363,11 @@ export default function HomePage() {
 
       <ChapterFrame>
         <div ref={showcaseRef} className="chapter-panel flex min-h-screen items-center overflow-hidden px-5 md:px-8">
-          <div className="showcase-track flex gap-6 py-20">
+          <div className={`showcase-track flex gap-6 py-16 md:py-20 ${isMobile ? "overflow-x-auto pr-8" : ""}`}>
             {showcaseProducts.map((product) => (
               <article
                 key={product.id}
-                className="showcase-card glass-panel flex h-[78vh] w-[82vw] max-w-[28rem] flex-shrink-0 flex-col overflow-hidden rounded-[2rem] md:w-[32rem]"
+                className="showcase-card glass-panel flex h-[72vh] w-[84vw] max-w-[28rem] flex-shrink-0 flex-col overflow-hidden rounded-[2rem] md:h-[78vh] md:w-[32rem]"
               >
                 <img src={product.images[0]} alt={product.name} className="h-[68%] w-full object-cover" loading="lazy" />
                 <div className="flex flex-1 flex-col justify-between p-5">
@@ -382,7 +385,7 @@ export default function HomePage() {
                         productName: product.name,
                         qty: 20,
                         total: formatMoney(product.bulkPrices[0].FCFA, "FCFA"),
-                        city: "LomÃ©",
+                        city: "Lomé",
                       })}
                       target="_blank"
                       rel="noreferrer"
@@ -403,10 +406,10 @@ export default function HomePage() {
         <div className="relative z-10 mx-auto max-w-5xl rounded-[2.5rem] border border-kora-gold/20 bg-white/5 px-6 py-16 text-center backdrop-blur-xl md:px-14">
           <p className="gold-kicker">Finale</p>
           <h2 className="mt-5 font-display text-6xl uppercase leading-none text-kora-cream md:text-[7rem]">
-            PrÃªt Ã  commander ?
+            Prêt à commander ?
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-kora-cream/72 md:text-lg">
-            Une sÃ©lection wholesale qui se dÃ©couvre comme une histoire et se convertit en commande sans friction.
+            Une sélection wholesale qui se découvre comme une histoire et se convertit en commande sans friction.
           </p>
           <div className="mt-10 flex justify-center">
             <a
@@ -414,7 +417,7 @@ export default function HomePage() {
                 productName: "Panier KORA IMPORT",
                 qty: 20,
                 total: formatMoney(54000, "FCFA"),
-                city: "LomÃ©",
+                city: "Lomé",
               })}
               target="_blank"
               rel="noreferrer"
