@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 
 export function useDeviceCapability() {
   const [isLowEnd, setIsLowEnd] = useState(false);
@@ -10,9 +10,7 @@ export function useDeviceCapability() {
     }
 
     const mobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-    const lowEnd =
-      navigator.hardwareConcurrency <= 2 ||
-      (mobile && navigator.hardwareConcurrency <= 4);
+    const lowEnd = navigator.hardwareConcurrency <= 2;
 
     setIsMobile(mobile);
     setIsLowEnd(lowEnd);

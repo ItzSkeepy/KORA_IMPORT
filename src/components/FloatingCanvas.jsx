@@ -1,4 +1,4 @@
-import { Canvas, useFrame } from "@react-three/fiber";
+﻿import { Canvas, useFrame } from "@react-three/fiber";
 import { Float, OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import { EffectComposer, Bloom, ChromaticAberration } from "@react-three/postprocessing";
 import { BlendFunction } from "postprocessing";
@@ -206,3 +206,4 @@ useGLTF.preload(modelUrl("shoe.glb"));
 useGLTF.preload(modelUrl("clothing.glb"));
 useGLTF.preload(modelUrl("electronics.glb"));
 useGLTF.preload(modelUrl("accessory.glb"));
+

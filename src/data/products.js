@@ -1,4 +1,4 @@
-const assetBase = import.meta.env.BASE_URL;
+﻿const assetBase = import.meta.env.BASE_URL;
 const productAsset = (path) => `${assetBase}${path}`;
 
 const mediaLibrary = {
